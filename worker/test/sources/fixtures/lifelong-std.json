@@ -1,6 +1,0 @@
-{"_note":"1행은 data.go.kr 15013110 페이지 미리보기 원문(날짜만 2026년), 응답 형식(최상위 header·body, insttCode)은 2026-10-12 실응답과 맞춤",
- "header":{"resultCode":"00","resultMsg":"NORMAL_SERVICE"},"body":{"items":[
-  {"lctreNm":"[26년 4분기] 생성형 AI 활용 블로그 글쓰기","instrctrNm":"이지현","edcStartDay":"2026-11-02","edcEndDay":"2026-12-21","edcStartTime":"13:00","edcColseTime":"15:00","lctreCo":"챗GPT로 블로그 글쓰기","edcTrgetType":"성인","edcMthType":"오프라인","operDay":"월","edcPlace":"수원시평생학습관 2관 310호","psncpa":"15","lctreCost":"20000","edcRdnmadr":"경기도 수원시 팔달구 월드컵로 381번길 2(우만동 582)","operInstitutionNm":"수원시 평생학습관","operPhoneNumber":"031-000-0000","rceptStartDate":"2026-10-05","rceptEndDate":"2026-10-30","rceptMthType":"인터넷","slctnMthType":"선착순","homepageUrl":"http://learning.suwon.go.kr","oadtCtLctreYn":"N","pntBankAckestYn":"N","lrnAcnutAckestYn":"N","referenceDate":"2026-09-30","insttCode":"3740000","instt_nm":"경기도 수원시"},
-  {"lctreNm":"온라인 엑셀 기초","edcStartDay":"2026-11-01","edcEndDay":"2026-11-30","edcMthType":"온라인","lctreCost":"0","operInstitutionNm":"부산 서구청","rceptEndDate":"2026-10-20","homepageUrl":"https://www.bsseogu.go.kr","insttCode":"3290000"},
-  {"lctreNm":"링크 없는 강좌","edcStartDay":"2026-11-01","operInstitutionNm":"어딘가","rceptEndDate":"2026-10-20","homepageUrl":""}
- ],"numOfRows":1000,"pageNo":1,"totalCount":3}}

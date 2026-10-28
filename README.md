@@ -2,7 +2,6 @@
 
 > 공공 API와 웹 페이지에 흩어진 AI 교육을 매일 모아, 지역·분야별로 찾아 주는 토스 미니앱. 소스 하나가 실패해도 기존 데이터를 지우지 않는 수집 파이프라인이 핵심입니다.
 
-[![CI](https://github.com/YoungkeunAhn/njob-edu-collector/actions/workflows/ci.yml/badge.svg)](https://github.com/YoungkeunAhn/njob-edu-collector/actions/workflows/ci.yml)
 ![TypeScript](https://img.shields.io/badge/TypeScript-7-3178C6?logo=typescript&logoColor=white)
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers%20Cron-F38020?logo=cloudflare&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3FCF8E?logo=supabase&logoColor=white)
@@ -92,18 +91,11 @@ DB 트리거는 `last_seen_at`이 과거로 돌아가지 않게 하고, 사람�
 
 원인 분석과 재현 과정은 [`docs/troubleshooting.md`](docs/troubleshooting.md)에 정리했습니다.
 
-## 실행과 테스트
+## 이 저장소에 대해
 
-```bash
-npm ci
-npm test            # Vitest 412개 (Worker + 앱). DB 테스트는 PGlite로 실제 마이그레이션을 적용해 돈다
-npm run typecheck
-```
+운영 저장소는 비공개입니다. 여기에는 설계를 설명하는 문서와, 그 설명이 가리키는 핵심 코드만 옮겼습니다. 빌드·실행에 필요한 나머지 코드는 넣지 않아 이 저장소만으로는 실행되지 않습니다.
 
-외부 키 없이 실응답 픽스처와 PGlite로 돕니다.
-
-- **실사이트 드라이런** `npm run dry-run -w worker`: 실제 사이트에서 받아 정규화까지 하되 메모리 저장소에 담아 DB에 쓰지 않습니다. 인자 없이 돌리면 키가 필요 없는 8개 소스만 돕니다. 공공 API 소스는 이름을 인자로 넘기고 [`worker/.dev.vars.example`](worker/.dev.vars.example)을 `worker/.dev.vars`로 복사해 키를 넣어야 하며, 헤드리스 소스(AI디지털배움터)는 Browser Rendering 바인딩이 필요해 여기서 돌지 않습니다.
-- **실제 수집** `npm run collect-local -w worker`: Supabase에 씁니다. `worker/.dev.vars`에 `SUPABASE_URL`·`SUPABASE_SERVICE_ROLE_KEY`가 필요합니다.
+테스트는 운영 저장소에서 Vitest 362개가 통과합니다(2026-10-28 실행). 외부 키 없이 실응답 픽스처로 돌고, DB 테스트는 PGlite에 실제 마이그레이션을 적용해 돕니다.
 
 ## 개발 방식
 
@@ -115,7 +107,7 @@ npm run typecheck
 
 ## 알려진 결함
 
-코드 리뷰에서 찾았고, 운영 저장소에서 고친 뒤 이 저장소에 반영할 예정입니다.
+코드 리뷰에서 찾았고, 운영 저장소에서 고칠 예정입니다. 로그인·찜·조회 API 코드는 이 저장소에 없습니다.
 
 - [#1](https://github.com/YoungkeunAhn/njob-edu-collector/issues/1) 토스 연결 해제 후 재로그인하면 해제 전 세션 토큰이 다시 유효해짐 — 토큰에 연결 버전이 없음
 - [#2](https://github.com/YoungkeunAhn/njob-edu-collector/issues/2) 찜 50개 한도가 동시 요청에서 지켜지지 않음 — 개수 조회와 추가가 분리됨
@@ -126,20 +118,22 @@ npm run typecheck
 ## 저장소 구성
 
 ```
-worker/src/sources/   소스별 어댑터 15개 + collectPages
-worker/src/collect/   수집 실행, upsert·정리, 텔레그램 알림
-worker/src/api/       조회 API (캐시, 요청 제한, CORS)
-worker/src/me/        토스 로그인(mTLS) · HMAC 세션 · 찜 · 마감 알림
-worker/scripts/       드라이런, 로컬 수집
-supabase/migrations/  스키마, RLS, 트리거, 뷰
-app/                  미니앱 (React · 토스 TDS)
-docs/                 소스 조사, 수집 설계, 아키텍처, 스펙·결정 기록, 운영 런북, AI 개발 워크플로우
-.claude/              이슈 → 계획 → 구현 → 배포 → 검수 요청 스킬과 검수 hook 게이트
+worker/wrangler.toml                  Cron 7개(수집 그룹 5개) 설정
+worker/src/collect/run.ts             소스 한 곳의 수집 실행과 정리 가드
+worker/src/collect/supabase-repo.ts   500건 배치 upsert, 정리
+worker/src/core/rules.ts              급감 판정(shouldPrune)
+worker/src/sources/util.ts            collectPages 페이지 완결성 검사
+worker/src/sources/index.ts           소스 15개 등록과 실행 위치
+worker/src/sources/digital-baeum.ts   헤드리스(Playwright) 소스 예
+worker/scripts/collect-local.ts       엣지 차단 소스용 로컬 PC 수집
+supabase/migrations/                  수집 시각 역행 방지 트리거
+docs/                                 소스 조사, 수집 설계, 아키텍처, 스펙·결정 기록, 운영 런북, AI 개발 워크플로우
+.claude/                              이슈 → 계획 → 구현 → 배포 → 검수 요청 스킬과 검수 hook 게이트
 ```
 
 ## 한계와 다음 과제
 
 - 엣지 차단 소스 3곳은 PC 한 대에 기대고 있어, PC가 꺼진 날은 데이터가 낡습니다. 마지막 성공 시각이 오래되면 알리는 장치가 먼저 필요합니다.
-- 운영 배포와 DB 마이그레이션은 런북([`docs/07-운영/배포-런북.md`](docs/07-운영/배포-런북.md))대로 수동입니다. CI는 이 공개본에 처음 붙였습니다.
+- 운영 배포와 DB 마이그레이션은 런북([`docs/07-운영/배포-런북.md`](docs/07-운영/배포-런북.md))대로 수동입니다.
 - 정리 가드의 "50% 미만 급감"은 경험칙입니다. 페이지 완결성 검사가 없는 소스는 삭제 자체를 꺼서 보완합니다.
 - 소스 간 같은 강좌를 아직 합치지 못합니다.
