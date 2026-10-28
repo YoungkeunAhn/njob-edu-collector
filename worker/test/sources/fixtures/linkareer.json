@@ -1,0 +1,2611 @@
+{
+ "_note": "출처: https://linkareer.com/list/education (HTML 안 <script id=__NEXT_DATA__> JSON), 받은 날짜 2026-10-12. 발췌: props.pageProps.__APOLLO_STATE__ 중 ROOT_QUERY 의 activities(1페이지 20건)·광고 목록과 Activity·Category·Onoffline·RegionDistrict 객체만. 담당자(User)·채널·채팅방·이미지(ActivityFile) 참조와 광고 상세는 지웠다.",
+ "props": {
+  "pageProps": {
+   "__APOLLO_STATE__": {
+    "Category:559": {
+     "__typename": "Category",
+     "id": "559",
+     "name": "프로그래밍",
+     "parent": null
+    },
+    "Category:570": {
+     "__typename": "Category",
+     "id": "570",
+     "name": "백엔드 개발",
+     "parent": {
+      "__ref": "Category:559"
+     }
+    },
+    "Category:571": {
+     "__typename": "Category",
+     "id": "571",
+     "name": "모바일 앱 개발",
+     "parent": {
+      "__ref": "Category:559"
+     }
+    },
+    "Category:613": {
+     "__typename": "Category",
+     "id": "613",
+     "name": "안드로이드",
+     "parent": {
+      "__ref": "Category:559"
+     }
+    },
+    "Category:562": {
+     "__typename": "Category",
+     "id": "562",
+     "name": "데이터사이언스",
+     "parent": null
+    },
+    "Category:592": {
+     "__typename": "Category",
+     "id": "592",
+     "name": "데이터분석",
+     "parent": {
+      "__ref": "Category:562"
+     }
+    },
+    "Category:566": {
+     "__typename": "Category",
+     "id": "566",
+     "name": "인공지능",
+     "parent": null
+    },
+    "Category:603": {
+     "__typename": "Category",
+     "id": "603",
+     "name": "ChatGPT",
+     "parent": {
+      "__ref": "Category:566"
+     }
+    },
+    "Onoffline:2": {
+     "__typename": "Onoffline",
+     "id": "2",
+     "name": "오프라인"
+    },
+    "Activity:355987": {
+     "__typename": "Activity",
+     "organizationName": "부산인재개발원(부산IT교육센터)",
+     "title": "생성형 AI기반 업무자동화 실무 서비스 구현(~11/5)",
+     "id": "355987",
+     "categories": [
+      {
+       "__ref": "Category:570"
+      },
+      {
+       "__ref": "Category:571"
+      },
+      {
+       "__ref": "Category:613"
+      },
+      {
+       "__ref": "Category:592"
+      },
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:559"
+      },
+      {
+       "__ref": "Category:562"
+      },
+      {
+       "__ref": "Category:566"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1793372400000,
+     "activityEndAt": 1801839599999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1793890799999,
+     "viewCount": 3,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:563": {
+     "__typename": "Category",
+     "id": "563",
+     "name": "업무생산성",
+     "parent": null
+    },
+    "Category:598": {
+     "__typename": "Category",
+     "id": "598",
+     "name": "숏북",
+     "parent": {
+      "__ref": "Category:563"
+     }
+    },
+    "Category:596": {
+     "__typename": "Category",
+     "id": "596",
+     "name": "PPT/보고서",
+     "parent": {
+      "__ref": "Category:563"
+     }
+    },
+    "Category:599": {
+     "__typename": "Category",
+     "id": "599",
+     "name": "ChatGPT 활용",
+     "parent": {
+      "__ref": "Category:563"
+     }
+    },
+    "Category:597": {
+     "__typename": "Category",
+     "id": "597",
+     "name": "글쓰기/카피라이팅",
+     "parent": {
+      "__ref": "Category:563"
+     }
+    },
+    "Category:595": {
+     "__typename": "Category",
+     "id": "595",
+     "name": "엑셀/VBA/업무자동화",
+     "parent": {
+      "__ref": "Category:563"
+     }
+    },
+    "Activity:355985": {
+     "__typename": "Activity",
+     "organizationName": "부산인재개발원(부산IT교육센터)",
+     "title": "챗GPT(ChatGPT)와 파이썬 활용한 업무자동화(~10/31)",
+     "id": "355985",
+     "categories": [
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:598"
+      },
+      {
+       "__ref": "Category:596"
+      },
+      {
+       "__ref": "Category:599"
+      },
+      {
+       "__ref": "Category:597"
+      },
+      {
+       "__ref": "Category:595"
+      },
+      {
+       "__ref": "Category:566"
+      },
+      {
+       "__ref": "Category:563"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1793372400000,
+     "activityEndAt": 1796482799999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1793458799999,
+     "viewCount": 4,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:612": {
+     "__typename": "Category",
+     "id": "612",
+     "name": "IOS",
+     "parent": {
+      "__ref": "Category:559"
+     }
+    },
+    "Category:575": {
+     "__typename": "Category",
+     "id": "575",
+     "name": "컴퓨터 공학/SW 엔지니어링",
+     "parent": {
+      "__ref": "Category:559"
+     }
+    },
+    "Category:594": {
+     "__typename": "Category",
+     "id": "594",
+     "name": "데이터엔지니어링",
+     "parent": {
+      "__ref": "Category:562"
+     }
+    },
+    "Category:615": {
+     "__typename": "Category",
+     "id": "615",
+     "name": "IoT · 임베디드 · 반도체",
+     "parent": null
+    },
+    "Category:618": {
+     "__typename": "Category",
+     "id": "618",
+     "name": "IoT",
+     "parent": {
+      "__ref": "Category:615"
+     }
+    },
+    "Category:616": {
+     "__typename": "Category",
+     "id": "616",
+     "name": "로보틱스",
+     "parent": {
+      "__ref": "Category:615"
+     }
+    },
+    "Category:617": {
+     "__typename": "Category",
+     "id": "617",
+     "name": "임베디드",
+     "parent": {
+      "__ref": "Category:615"
+     }
+    },
+    "Category:619": {
+     "__typename": "Category",
+     "id": "619",
+     "name": "반도체",
+     "parent": {
+      "__ref": "Category:615"
+     }
+    },
+    "Category:561": {
+     "__typename": "Category",
+     "id": "561",
+     "name": "비즈니스",
+     "parent": null
+    },
+    "Category:625": {
+     "__typename": "Category",
+     "id": "625",
+     "name": "취업/이직",
+     "parent": {
+      "__ref": "Category:561"
+     }
+    },
+    "Category:581": {
+     "__typename": "Category",
+     "id": "581",
+     "name": "커뮤니케이션/리더십",
+     "parent": {
+      "__ref": "Category:561"
+     }
+    },
+    "Category:587": {
+     "__typename": "Category",
+     "id": "587",
+     "name": "자격증",
+     "parent": {
+      "__ref": "Category:561"
+     }
+    },
+    "Category:620": {
+     "__typename": "Category",
+     "id": "620",
+     "name": "클라우드 · 보안",
+     "parent": null
+    },
+    "Category:624": {
+     "__typename": "Category",
+     "id": "624",
+     "name": "보안",
+     "parent": {
+      "__ref": "Category:620"
+     }
+    },
+    "Category:623": {
+     "__typename": "Category",
+     "id": "623",
+     "name": "인프라",
+     "parent": {
+      "__ref": "Category:620"
+     }
+    },
+    "Category:621": {
+     "__typename": "Category",
+     "id": "621",
+     "name": "클라우드",
+     "parent": {
+      "__ref": "Category:620"
+     }
+    },
+    "Category:622": {
+     "__typename": "Category",
+     "id": "622",
+     "name": "데브옵스",
+     "parent": {
+      "__ref": "Category:620"
+     }
+    },
+    "Category:569": {
+     "__typename": "Category",
+     "id": "569",
+     "name": "프론트엔드 개발",
+     "parent": {
+      "__ref": "Category:559"
+     }
+    },
+    "Category:572": {
+     "__typename": "Category",
+     "id": "572",
+     "name": "DevOps/Infra",
+     "parent": {
+      "__ref": "Category:559"
+     }
+    },
+    "Category:573": {
+     "__typename": "Category",
+     "id": "573",
+     "name": "블록체인 개발",
+     "parent": {
+      "__ref": "Category:559"
+     }
+    },
+    "Category:574": {
+     "__typename": "Category",
+     "id": "574",
+     "name": "게임 개발",
+     "parent": {
+      "__ref": "Category:559"
+     }
+    },
+    "Category:593": {
+     "__typename": "Category",
+     "id": "593",
+     "name": "머신러닝",
+     "parent": {
+      "__ref": "Category:562"
+     }
+    },
+    "Category:614": {
+     "__typename": "Category",
+     "id": "614",
+     "name": "AI/ML",
+     "parent": {
+      "__ref": "Category:562"
+     }
+    },
+    "Category:600": {
+     "__typename": "Category",
+     "id": "600",
+     "name": "딥러닝",
+     "parent": {
+      "__ref": "Category:566"
+     }
+    },
+    "Category:601": {
+     "__typename": "Category",
+     "id": "601",
+     "name": "컴퓨터비전",
+     "parent": {
+      "__ref": "Category:566"
+     }
+    },
+    "Category:602": {
+     "__typename": "Category",
+     "id": "602",
+     "name": "자연어처리",
+     "parent": {
+      "__ref": "Category:566"
+     }
+    },
+    "Category:580": {
+     "__typename": "Category",
+     "id": "580",
+     "name": "경영/부업/창업",
+     "parent": {
+      "__ref": "Category:561"
+     }
+    },
+    "RegionDistrict:103": {
+     "__typename": "RegionDistrict",
+     "id": "103",
+     "name": "성남시",
+     "region": {
+      "__typename": "Region",
+      "id": "9",
+      "name": "경기"
+     }
+    },
+    "Activity:355941": {
+     "__typename": "Activity",
+     "organizationName": "한국팹리스산업협회",
+     "title": "[2026 FINAL/마지막 기회] 넥스트칩·텔레칩스 실무 보드 실습+수당 75만 원까지! 반도체 실무 풀코스 '팹리스 점프업 5기' 모집 (~11/8)",
+     "id": "355941",
+     "categories": [
+      {
+       "__ref": "Category:612"
+      },
+      {
+       "__ref": "Category:575"
+      },
+      {
+       "__ref": "Category:592"
+      },
+      {
+       "__ref": "Category:594"
+      },
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:618"
+      },
+      {
+       "__ref": "Category:616"
+      },
+      {
+       "__ref": "Category:617"
+      },
+      {
+       "__ref": "Category:619"
+      },
+      {
+       "__ref": "Category:625"
+      },
+      {
+       "__ref": "Category:581"
+      },
+      {
+       "__ref": "Category:587"
+      },
+      {
+       "__ref": "Category:624"
+      },
+      {
+       "__ref": "Category:623"
+      },
+      {
+       "__ref": "Category:621"
+      },
+      {
+       "__ref": "Category:622"
+      },
+      {
+       "__ref": "Category:559"
+      },
+      {
+       "__ref": "Category:562"
+      },
+      {
+       "__ref": "Category:566"
+      },
+      {
+       "__ref": "Category:615"
+      },
+      {
+       "__ref": "Category:561"
+      },
+      {
+       "__ref": "Category:620"
+      },
+      {
+       "__ref": "Category:569"
+      },
+      {
+       "__ref": "Category:570"
+      },
+      {
+       "__ref": "Category:571"
+      },
+      {
+       "__ref": "Category:572"
+      },
+      {
+       "__ref": "Category:573"
+      },
+      {
+       "__ref": "Category:574"
+      },
+      {
+       "__ref": "Category:613"
+      },
+      {
+       "__ref": "Category:593"
+      },
+      {
+       "__ref": "Category:614"
+      },
+      {
+       "__ref": "Category:600"
+      },
+      {
+       "__ref": "Category:601"
+      },
+      {
+       "__ref": "Category:602"
+      },
+      {
+       "__ref": "Category:580"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": false,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:103"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1794754800000,
+     "activityEndAt": 1798037999999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1794149999999,
+     "viewCount": 45,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:636": {
+     "__typename": "Category",
+     "id": "636",
+     "name": "기타",
+     "parent": null
+    },
+    "Category:637": {
+     "__typename": "Category",
+     "id": "637",
+     "name": "기타",
+     "parent": {
+      "__ref": "Category:636"
+     }
+    },
+    "RegionDistrict:75": {
+     "__typename": "RegionDistrict",
+     "id": "75",
+     "name": "유성구",
+     "region": {
+      "__typename": "Region",
+      "id": "7",
+      "name": "대전"
+     }
+    },
+    "Activity:355911": {
+     "__typename": "Activity",
+     "organizationName": "한남대학교",
+     "title": "[대전국제개발협력센터&KOICA] 2026 함께하는 ODA 교육원(10/28(수), 라마다호텔)",
+     "id": "355911",
+     "categories": [
+      {
+       "__ref": "Category:637"
+      },
+      {
+       "__ref": "Category:636"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": false,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:75"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1793113200000,
+     "activityEndAt": 1793199599999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792162799999,
+     "viewCount": 52,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:564": {
+     "__typename": "Category",
+     "id": "564",
+     "name": "기획 · 마케팅",
+     "parent": null
+    },
+    "Category:584": {
+     "__typename": "Category",
+     "id": "584",
+     "name": "콘텐츠마케팅",
+     "parent": {
+      "__ref": "Category:564"
+     }
+    },
+    "Category:567": {
+     "__typename": "Category",
+     "id": "567",
+     "name": "영상 · 3D",
+     "parent": null
+    },
+    "Category:604": {
+     "__typename": "Category",
+     "id": "604",
+     "name": "영상/사진",
+     "parent": {
+      "__ref": "Category:567"
+     }
+    },
+    "RegionDistrict:23": {
+     "__typename": "RegionDistrict",
+     "id": "23",
+     "name": "용산구",
+     "region": {
+      "__typename": "Region",
+      "id": "2",
+      "name": "서울"
+     }
+    },
+    "Activity:355854": {
+     "__typename": "Activity",
+     "organizationName": "샌드박스네트워크",
+     "title": "[샌드박스] 광고마케팅(영상 제작, 마케팅, 데이터분석) 일경험 프로그램",
+     "id": "355854",
+     "categories": [
+      {
+       "__ref": "Category:592"
+      },
+      {
+       "__ref": "Category:584"
+      },
+      {
+       "__ref": "Category:604"
+      },
+      {
+       "__ref": "Category:562"
+      },
+      {
+       "__ref": "Category:564"
+      },
+      {
+       "__ref": "Category:567"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": false,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:23"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1792940400000,
+     "activityEndAt": 1798815599999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792076399999,
+     "viewCount": 169,
+     "scrapCount": 9,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:355853": {
+     "__typename": "Activity",
+     "organizationName": "샌드박스네트워크",
+     "title": "[샌드박스] 광고마케팅(마케터) AD Business 일경험 프로그램",
+     "id": "355853",
+     "categories": [
+      {
+       "__ref": "Category:584"
+      },
+      {
+       "__ref": "Category:564"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": false,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:23"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1792940400000,
+     "activityEndAt": 1798815599999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792076399999,
+     "viewCount": 98,
+     "scrapCount": 4,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:355830": {
+     "__typename": "Activity",
+     "organizationName": "에이블런",
+     "title": "[활동비·상금 2,000만원 상당 지원] 기업의 실제 문제를 AI로 해결할 프로젝트팀 모집",
+     "id": "355830",
+     "categories": [
+      {
+       "__ref": "Category:601"
+      },
+      {
+       "__ref": "Category:566"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": false,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1792076400000,
+     "activityEndAt": 1795013999999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792076399999,
+     "viewCount": 149,
+     "scrapCount": 2,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Onoffline:1": {
+     "__typename": "Onoffline",
+     "id": "1",
+     "name": "온라인"
+    },
+    "Activity:355816": {
+     "__typename": "Activity",
+     "organizationName": "도봉구청(청년미래과)",
+     "title": "해외경험청년 1:1 취업 컨설팅 참여자 모집 ✈️",
+     "id": "355816",
+     "categories": [
+      {
+       "__ref": "Category:637"
+      },
+      {
+       "__ref": "Category:636"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": false,
+     "onoffline": {
+      "__ref": "Onoffline:1"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1791385200000,
+     "activityEndAt": 1793458799999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792162799999,
+     "viewCount": 117,
+     "scrapCount": 1,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "RegionDistrict:28": {
+     "__typename": "RegionDistrict",
+     "id": "28",
+     "name": "전체",
+     "region": {
+      "__typename": "Region",
+      "id": "3",
+      "name": "부산"
+     }
+    },
+    "Activity:355743": {
+     "__typename": "Activity",
+     "organizationName": "부산지방고용노동청 해양산업특화고용센터",
+     "title": "[부산/취업교육] 해양·국제물류 사무원 양성교육 모집 | 현직자 강의·채용 연계",
+     "id": "355743",
+     "categories": [
+      {
+       "__ref": "Category:592"
+      },
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:595"
+      },
+      {
+       "__ref": "Category:597"
+      },
+      {
+       "__ref": "Category:599"
+      },
+      {
+       "__ref": "Category:598"
+      },
+      {
+       "__ref": "Category:596"
+      },
+      {
+       "__ref": "Category:581"
+      },
+      {
+       "__ref": "Category:587"
+      },
+      {
+       "__ref": "Category:580"
+      },
+      {
+       "__ref": "Category:637"
+      },
+      {
+       "__ref": "Category:562"
+      },
+      {
+       "__ref": "Category:566"
+      },
+      {
+       "__ref": "Category:563"
+      },
+      {
+       "__ref": "Category:561"
+      },
+      {
+       "__ref": "Category:636"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:28"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1792940400000,
+     "activityEndAt": 1793372399999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792162799999,
+     "viewCount": 68,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "RegionDistrict:25": {
+     "__typename": "RegionDistrict",
+     "id": "25",
+     "name": "종로구",
+     "region": {
+      "__typename": "Region",
+      "id": "2",
+      "name": "서울"
+     }
+    },
+    "Activity:355711": {
+     "__typename": "Activity",
+     "organizationName": "(주)솔데스크",
+     "title": "[전액무료] AI캠퍼스 2기 \"취업 연계부터 실전 포트폴리오까지, 안 들으면 손해인 5개 트랙\"",
+     "id": "355711",
+     "categories": [
+      {
+       "__ref": "Category:569"
+      },
+      {
+       "__ref": "Category:570"
+      },
+      {
+       "__ref": "Category:572"
+      },
+      {
+       "__ref": "Category:575"
+      },
+      {
+       "__ref": "Category:593"
+      },
+      {
+       "__ref": "Category:614"
+      },
+      {
+       "__ref": "Category:594"
+      },
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:600"
+      },
+      {
+       "__ref": "Category:602"
+      },
+      {
+       "__ref": "Category:622"
+      },
+      {
+       "__ref": "Category:623"
+      },
+      {
+       "__ref": "Category:621"
+      },
+      {
+       "__ref": "Category:624"
+      },
+      {
+       "__ref": "Category:559"
+      },
+      {
+       "__ref": "Category:562"
+      },
+      {
+       "__ref": "Category:566"
+      },
+      {
+       "__ref": "Category:620"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:25"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1793286000000,
+     "activityEndAt": 1809961199999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1793285999999,
+     "viewCount": 67,
+     "scrapCount": 1,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:355701": {
+     "__typename": "Activity",
+     "organizationName": "천안여성인력개발센터",
+     "title": "전산회계1급자격증",
+     "id": "355701",
+     "categories": [
+      {
+       "__ref": "Category:637"
+      },
+      {
+       "__ref": "Category:636"
+      }
+     ],
+     "cost": 140000,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1792335600000,
+     "activityEndAt": 1796396399999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792421999999,
+     "viewCount": 29,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:355700": {
+     "__typename": "Activity",
+     "organizationName": "(주)잡모아 서부지점",
+     "title": "※고용노동부 주관※[인천서해구시설관리공단(재난안전실)] 청년일경험 인턴형 11월 프로그램 참여 모집 !",
+     "id": "355700",
+     "categories": [
+      {
+       "__ref": "Category:625"
+      },
+      {
+       "__ref": "Category:561"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1794150000000,
+     "activityEndAt": 1798815599999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792335599999,
+     "viewCount": 30,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:568": {
+     "__typename": "Category",
+     "id": "568",
+     "name": "금융 · 투자",
+     "parent": null
+    },
+    "Category:608": {
+     "__typename": "Category",
+     "id": "608",
+     "name": "부동산",
+     "parent": {
+      "__ref": "Category:568"
+     }
+    },
+    "Category:610": {
+     "__typename": "Category",
+     "id": "610",
+     "name": "재무/회계/세무",
+     "parent": {
+      "__ref": "Category:568"
+     }
+    },
+    "Category:609": {
+     "__typename": "Category",
+     "id": "609",
+     "name": "금융 투자 실무",
+     "parent": {
+      "__ref": "Category:568"
+     }
+    },
+    "Category:611": {
+     "__typename": "Category",
+     "id": "611",
+     "name": "재테크/주식",
+     "parent": {
+      "__ref": "Category:568"
+     }
+    },
+    "RegionDistrict:2": {
+     "__typename": "RegionDistrict",
+     "id": "2",
+     "name": "전체",
+     "region": {
+      "__typename": "Region",
+      "id": "2",
+      "name": "서울"
+     }
+    },
+    "RegionDistrict:83": {
+     "__typename": "RegionDistrict",
+     "id": "83",
+     "name": "전체",
+     "region": {
+      "__typename": "Region",
+      "id": "9",
+      "name": "경기"
+     }
+    },
+    "Activity:355697": {
+     "__typename": "Activity",
+     "organizationName": "대방청소년센터",
+     "title": "대학생·사회초년생 주목! AI랑 시작하는 첫 재테크 원데이클래스 참가자 모집",
+     "id": "355697",
+     "categories": [
+      {
+       "__ref": "Category:608"
+      },
+      {
+       "__ref": "Category:610"
+      },
+      {
+       "__ref": "Category:609"
+      },
+      {
+       "__ref": "Category:611"
+      },
+      {
+       "__ref": "Category:568"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": false,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "2",
+       "name": "서울"
+      },
+      {
+       "__typename": "Region",
+       "id": "9",
+       "name": "경기"
+      }
+     ],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:2"
+      },
+      {
+       "__ref": "RegionDistrict:83"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1794322800000,
+     "activityEndAt": 1795618799999,
+     "recruitType": "ASAP",
+     "recruitCloseAt": 1799247599999,
+     "viewCount": 51,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:355691": {
+     "__typename": "Activity",
+     "organizationName": "주식회사 케이디아카데미",
+     "title": "12/7 [인사] 인사경리양성(인사급여실무/전산회계1급,FAT1급/전산세무2급,TAT2급) ★27년시험",
+     "id": "355691",
+     "categories": [
+      {
+       "__ref": "Category:587"
+      },
+      {
+       "__ref": "Category:610"
+      },
+      {
+       "__ref": "Category:561"
+      },
+      {
+       "__ref": "Category:568"
+      }
+     ],
+     "cost": 340000,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1796569200000,
+     "activityEndAt": 1800543599999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1797260399999,
+     "viewCount": 28,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:355689": {
+     "__typename": "Activity",
+     "organizationName": "주식회사 케이디아카데미",
+     "title": "11/30 [스펙업] 컴퓨터활용능력2급(엑셀/필기,실기) 자격증취득",
+     "id": "355689",
+     "categories": [
+      {
+       "__ref": "Category:587"
+      },
+      {
+       "__ref": "Category:595"
+      },
+      {
+       "__ref": "Category:561"
+      },
+      {
+       "__ref": "Category:563"
+      }
+     ],
+     "cost": 260000,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1795964400000,
+     "activityEndAt": 1798469999999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1796137199999,
+     "viewCount": 34,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:355686": {
+     "__typename": "Activity",
+     "organizationName": "kt클라우드",
+     "title": "(강남역) KT클라우드 AI 데이터센터 인프라 엔지니어 취업연계 국비지원교육",
+     "id": "355686",
+     "categories": [
+      {
+       "__ref": "Category:621"
+      },
+      {
+       "__ref": "Category:622"
+      },
+      {
+       "__ref": "Category:624"
+      },
+      {
+       "__ref": "Category:600"
+      },
+      {
+       "__ref": "Category:602"
+      },
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:601"
+      },
+      {
+       "__ref": "Category:592"
+      },
+      {
+       "__ref": "Category:614"
+      },
+      {
+       "__ref": "Category:593"
+      },
+      {
+       "__ref": "Category:620"
+      },
+      {
+       "__ref": "Category:566"
+      },
+      {
+       "__ref": "Category:562"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:1"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1793286000000,
+     "activityEndAt": 1809097199999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1793372399999,
+     "viewCount": 70,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "RegionDistrict:3": {
+     "__typename": "RegionDistrict",
+     "id": "3",
+     "name": "강남구",
+     "region": {
+      "__typename": "Region",
+      "id": "2",
+      "name": "서울"
+     }
+    },
+    "Activity:355685": {
+     "__typename": "Activity",
+     "organizationName": "kt cloud",
+     "title": "[강남] KT클라우드 데이터센터 인프라 취업 부트캠프",
+     "id": "355685",
+     "categories": [
+      {
+       "__ref": "Category:592"
+      },
+      {
+       "__ref": "Category:594"
+      },
+      {
+       "__ref": "Category:621"
+      },
+      {
+       "__ref": "Category:623"
+      },
+      {
+       "__ref": "Category:622"
+      },
+      {
+       "__ref": "Category:624"
+      },
+      {
+       "__ref": "Category:562"
+      },
+      {
+       "__ref": "Category:620"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:3"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1793718000000,
+     "activityEndAt": 1809701999999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1793113199999,
+     "viewCount": 46,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:355682": {
+     "__typename": "Activity",
+     "organizationName": "kt cloud",
+     "title": "[실시간 온라인] KT클라우드 인프라 취업 부트캠프",
+     "id": "355682",
+     "categories": [
+      {
+       "__ref": "Category:621"
+      },
+      {
+       "__ref": "Category:623"
+      },
+      {
+       "__ref": "Category:622"
+      },
+      {
+       "__ref": "Category:624"
+      },
+      {
+       "__ref": "Category:620"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:1"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1792508400000,
+     "activityEndAt": 1810047599999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792594799999,
+     "viewCount": 34,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "RegionDistrict:10": {
+     "__typename": "RegionDistrict",
+     "id": "10",
+     "name": "금천구",
+     "region": {
+      "__typename": "Region",
+      "id": "2",
+      "name": "서울"
+     }
+    },
+    "Activity:355681": {
+     "__typename": "Activity",
+     "organizationName": "SM Universe",
+     "title": "[SM Universe] 버츄얼 콘텐츠 IT개발자 취업 교육, 비전공자 환영",
+     "id": "355681",
+     "categories": [
+      {
+       "__ref": "Category:574"
+      },
+      {
+       "__ref": "Category:570"
+      },
+      {
+       "__ref": "Category:569"
+      },
+      {
+       "__ref": "Category:571"
+      },
+      {
+       "__ref": "Category:575"
+      },
+      {
+       "__ref": "Category:559"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:10"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1792594800000,
+     "activityEndAt": 1808924399999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792681199999,
+     "viewCount": 70,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:565": {
+     "__typename": "Category",
+     "id": "565",
+     "name": "디자인",
+     "parent": null
+    },
+    "Category:590": {
+     "__typename": "Category",
+     "id": "590",
+     "name": "2D/그래픽/브랜딩",
+     "parent": {
+      "__ref": "Category:565"
+     }
+    },
+    "Activity:355679": {
+     "__typename": "Activity",
+     "organizationName": "주식회사 케이디아카데미",
+     "title": "11/19 편집디자인실무활용(포스터/리플렛/사보/매거진)",
+     "id": "355679",
+     "categories": [
+      {
+       "__ref": "Category:590"
+      },
+      {
+       "__ref": "Category:565"
+      }
+     ],
+     "cost": 100000,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1795014000000,
+     "activityEndAt": 1796309999999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1795186799999,
+     "viewCount": 23,
+     "scrapCount": 0,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "ROOT_QUERY": {
+     "__typename": "Query",
+     "activities({\"filterBy\":{\"activityTypeID\":\"6\",\"categoryIDs\":[],\"cost\":[],\"educationTypeIds\":[],\"onofflineId\":null,\"period\":null,\"q\":null,\"regionIDs\":[],\"status\":\"OPEN\"},\"orderBy\":{\"direction\":\"DESC\",\"field\":\"RECENT\"},\"pagination\":{\"page\":1,\"pageSize\":20}})": {
+      "__typename": "ActivityConnection",
+      "nodes": [
+       {
+        "__ref": "Activity:355987"
+       },
+       {
+        "__ref": "Activity:355985"
+       },
+       {
+        "__ref": "Activity:355941"
+       },
+       {
+        "__ref": "Activity:355911"
+       },
+       {
+        "__ref": "Activity:355854"
+       },
+       {
+        "__ref": "Activity:355853"
+       },
+       {
+        "__ref": "Activity:355830"
+       },
+       {
+        "__ref": "Activity:355816"
+       },
+       {
+        "__ref": "Activity:355743"
+       },
+       {
+        "__ref": "Activity:355711"
+       },
+       {
+        "__ref": "Activity:355701"
+       },
+       {
+        "__ref": "Activity:355700"
+       },
+       {
+        "__ref": "Activity:355697"
+       },
+       {
+        "__ref": "Activity:355691"
+       },
+       {
+        "__ref": "Activity:355689"
+       },
+       {
+        "__ref": "Activity:355686"
+       },
+       {
+        "__ref": "Activity:355685"
+       },
+       {
+        "__ref": "Activity:355682"
+       },
+       {
+        "__ref": "Activity:355681"
+       },
+       {
+        "__ref": "Activity:355679"
+       }
+      ],
+      "totalCount": 764
+     },
+     "activityListFromAdsByPlacementCode({\"adPlacementCode\":\"activity-education-notice-banner\"})": [
+      {
+       "__typename": "ActivityWithAd",
+       "activity": {
+        "__ref": "Activity:347881"
+       },
+       "ad": null
+      },
+      {
+       "__typename": "ActivityWithAd",
+       "activity": {
+        "__ref": "Activity:321836"
+       },
+       "ad": null
+      },
+      {
+       "__typename": "ActivityWithAd",
+       "activity": {
+        "__ref": "Activity:355432"
+       },
+       "ad": null
+      },
+      {
+       "__typename": "ActivityWithAd",
+       "activity": {
+        "__ref": "Activity:351897"
+       },
+       "ad": null
+      },
+      {
+       "__typename": "ActivityWithAd",
+       "activity": {
+        "__ref": "Activity:353421"
+       },
+       "ad": null
+      },
+      {
+       "__typename": "ActivityWithAd",
+       "activity": {
+        "__ref": "Activity:343599"
+       },
+       "ad": null
+      },
+      {
+       "__typename": "ActivityWithAd",
+       "activity": {
+        "__ref": "Activity:354858"
+       },
+       "ad": null
+      },
+      {
+       "__typename": "ActivityWithAd",
+       "activity": {
+        "__ref": "Activity:354852"
+       },
+       "ad": null
+      }
+     ]
+    },
+    "Activity:347881": {
+     "__typename": "Activity",
+     "organizationName": "대한상공회의소 서울기술교육센터",
+     "title": "[AI캠퍼스/취업률96%] Telechips,넥스트칩,에이텍 반도체SW AI엔지니어 양성 과정/온디바이스 AI SW개발(2기) 11월 개강 (교육비0원 KDT/월최대100만원수당)",
+     "id": "347881",
+     "categories": [
+      {
+       "__ref": "Category:575"
+      },
+      {
+       "__ref": "Category:570"
+      },
+      {
+       "__ref": "Category:614"
+      },
+      {
+       "__ref": "Category:593"
+      },
+      {
+       "__ref": "Category:601"
+      },
+      {
+       "__ref": "Category:600"
+      },
+      {
+       "__ref": "Category:618"
+      },
+      {
+       "__ref": "Category:617"
+      },
+      {
+       "__ref": "Category:619"
+      },
+      {
+       "__ref": "Category:569"
+      },
+      {
+       "__ref": "Category:571"
+      },
+      {
+       "__ref": "Category:572"
+      },
+      {
+       "__ref": "Category:573"
+      },
+      {
+       "__ref": "Category:574"
+      },
+      {
+       "__ref": "Category:612"
+      },
+      {
+       "__ref": "Category:613"
+      },
+      {
+       "__ref": "Category:592"
+      },
+      {
+       "__ref": "Category:594"
+      },
+      {
+       "__ref": "Category:602"
+      },
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:616"
+      },
+      {
+       "__ref": "Category:559"
+      },
+      {
+       "__ref": "Category:562"
+      },
+      {
+       "__ref": "Category:566"
+      },
+      {
+       "__ref": "Category:615"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1793631600000,
+     "activityEndAt": 1812034799999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792162799999,
+     "viewCount": 2464,
+     "scrapCount": 36,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:321836": {
+     "__typename": "Activity",
+     "organizationName": "이젠아카데미DX교육센터",
+     "title": "[취업연계] Physical AI 카티아 삼성·SK 반도체 장비로봇 설계·해석 / 현대자동차 모빌리티설계 취업캠프 12기 모집",
+     "id": "321836",
+     "categories": [
+      {
+       "__ref": "Category:616"
+      },
+      {
+       "__ref": "Category:619"
+      },
+      {
+       "__ref": "Category:618"
+      },
+      {
+       "__ref": "Category:617"
+      },
+      {
+       "__ref": "Category:615"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1791903600000,
+     "activityEndAt": 1805986799999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1791989999999,
+     "viewCount": 14358,
+     "scrapCount": 245,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:582": {
+     "__typename": "Category",
+     "id": "582",
+     "name": "디지털마케팅",
+     "parent": {
+      "__ref": "Category:564"
+     }
+    },
+    "Category:586": {
+     "__typename": "Category",
+     "id": "586",
+     "name": "브랜드마케팅",
+     "parent": {
+      "__ref": "Category:564"
+     }
+    },
+    "Activity:355432": {
+     "__typename": "Activity",
+     "organizationName": "한경닷컴",
+     "title": "[한경닷컴] 미래내일 일경험(프로젝트형) 마케팅 잡 프로젝트 8기 참여자 모집(~10/13)",
+     "id": "355432",
+     "categories": [
+      {
+       "__ref": "Category:584"
+      },
+      {
+       "__ref": "Category:582"
+      },
+      {
+       "__ref": "Category:586"
+      },
+      {
+       "__ref": "Category:625"
+      },
+      {
+       "__ref": "Category:564"
+      },
+      {
+       "__ref": "Category:561"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:1"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1792422000000,
+     "activityEndAt": 1797433199999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1791903599999,
+     "viewCount": 1153,
+     "scrapCount": 34,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:579": {
+     "__typename": "Category",
+     "id": "579",
+     "name": "PM/PO/기획",
+     "parent": {
+      "__ref": "Category:564"
+     }
+    },
+    "Category:583": {
+     "__typename": "Category",
+     "id": "583",
+     "name": "퍼포먼스마케팅",
+     "parent": {
+      "__ref": "Category:564"
+     }
+    },
+    "Category:585": {
+     "__typename": "Category",
+     "id": "585",
+     "name": "CRM마케팅",
+     "parent": {
+      "__ref": "Category:564"
+     }
+    },
+    "Activity:351897": {
+     "__typename": "Activity",
+     "organizationName": "(재)건설산업교육원",
+     "title": "[에듀콘] 해외 비즈니스 외국어 과정 겨울기수 교육생 모집 시작 (~10.25)",
+     "id": "351897",
+     "categories": [
+      {
+       "__ref": "Category:596"
+      },
+      {
+       "__ref": "Category:597"
+      },
+      {
+       "__ref": "Category:598"
+      },
+      {
+       "__ref": "Category:599"
+      },
+      {
+       "__ref": "Category:580"
+      },
+      {
+       "__ref": "Category:581"
+      },
+      {
+       "__ref": "Category:587"
+      },
+      {
+       "__ref": "Category:625"
+      },
+      {
+       "__ref": "Category:579"
+      },
+      {
+       "__ref": "Category:582"
+      },
+      {
+       "__ref": "Category:583"
+      },
+      {
+       "__ref": "Category:584"
+      },
+      {
+       "__ref": "Category:585"
+      },
+      {
+       "__ref": "Category:586"
+      },
+      {
+       "__ref": "Category:595"
+      },
+      {
+       "__ref": "Category:637"
+      },
+      {
+       "__ref": "Category:563"
+      },
+      {
+       "__ref": "Category:561"
+      },
+      {
+       "__ref": "Category:564"
+      },
+      {
+       "__ref": "Category:636"
+      }
+     ],
+     "cost": 300000,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [],
+     "regionDistricts": [
+      {
+       "__ref": "RegionDistrict:3"
+      }
+     ],
+     "addresses": [],
+     "activityStartAt": 1797433200000,
+     "activityEndAt": 1804172399999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792940399999,
+     "viewCount": 719,
+     "scrapCount": 27,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:589": {
+     "__typename": "Category",
+     "id": "589",
+     "name": "UX/UI",
+     "parent": {
+      "__ref": "Category:565"
+     }
+    },
+    "Category:591": {
+     "__typename": "Category",
+     "id": "591",
+     "name": "3D/건축",
+     "parent": {
+      "__ref": "Category:565"
+     }
+    },
+    "Activity:353421": {
+     "__typename": "Activity",
+     "organizationName": "애플 디벨로퍼 아카데미",
+     "title": "[Apple 디벨로퍼 아카데미] 포트폴리오 챌린지 가을 시즌",
+     "id": "353421",
+     "categories": [
+      {
+       "__ref": "Category:571"
+      },
+      {
+       "__ref": "Category:612"
+      },
+      {
+       "__ref": "Category:625"
+      },
+      {
+       "__ref": "Category:579"
+      },
+      {
+       "__ref": "Category:589"
+      },
+      {
+       "__ref": "Category:637"
+      },
+      {
+       "__ref": "Category:559"
+      },
+      {
+       "__ref": "Category:561"
+      },
+      {
+       "__ref": "Category:564"
+      },
+      {
+       "__ref": "Category:565"
+      },
+      {
+       "__ref": "Category:636"
+      },
+      {
+       "__ref": "Category:569"
+      },
+      {
+       "__ref": "Category:575"
+      },
+      {
+       "__ref": "Category:613"
+      },
+      {
+       "__ref": "Category:574"
+      },
+      {
+       "__ref": "Category:572"
+      },
+      {
+       "__ref": "Category:570"
+      },
+      {
+       "__ref": "Category:592"
+      },
+      {
+       "__ref": "Category:614"
+      },
+      {
+       "__ref": "Category:594"
+      },
+      {
+       "__ref": "Category:593"
+      },
+      {
+       "__ref": "Category:602"
+      },
+      {
+       "__ref": "Category:600"
+      },
+      {
+       "__ref": "Category:601"
+      },
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:618"
+      },
+      {
+       "__ref": "Category:597"
+      },
+      {
+       "__ref": "Category:596"
+      },
+      {
+       "__ref": "Category:590"
+      },
+      {
+       "__ref": "Category:591"
+      },
+      {
+       "__ref": "Category:583"
+      },
+      {
+       "__ref": "Category:585"
+      },
+      {
+       "__ref": "Category:586"
+      },
+      {
+       "__ref": "Category:584"
+      },
+      {
+       "__ref": "Category:582"
+      },
+      {
+       "__ref": "Category:562"
+      },
+      {
+       "__ref": "Category:566"
+      },
+      {
+       "__ref": "Category:615"
+      },
+      {
+       "__ref": "Category:563"
+      },
+      {
+       "__ref": "Category:573"
+      },
+      {
+       "__ref": "Category:580"
+      },
+      {
+       "__ref": "Category:581"
+      },
+      {
+       "__ref": "Category:587"
+      },
+      {
+       "__ref": "Category:616"
+      },
+      {
+       "__ref": "Category:617"
+      },
+      {
+       "__ref": "Category:619"
+      },
+      {
+       "__ref": "Category:595"
+      },
+      {
+       "__ref": "Category:598"
+      },
+      {
+       "__ref": "Category:599"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": false,
+     "onoffline": {
+      "__ref": "Onoffline:2"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1792940400000,
+     "activityEndAt": 1793372399999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792681199999,
+     "viewCount": 528,
+     "scrapCount": 22,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Onoffline:3": {
+     "__typename": "Onoffline",
+     "id": "3",
+     "name": "온/오프라인 혼합"
+    },
+    "Activity:343599": {
+     "__typename": "Activity",
+     "organizationName": "현대엔지비",
+     "title": "[현대자동차그룹] 매치업 X+AI 교육생 모집 (우수자 총 460만원 시상)",
+     "id": "343599",
+     "categories": [
+      {
+       "__ref": "Category:637"
+      },
+      {
+       "__ref": "Category:636"
+      }
+     ],
+     "cost": 0,
+     "isSponsored": false,
+     "onoffline": {
+      "__ref": "Onoffline:3"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1787670000000,
+     "activityEndAt": 1798556399999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1792594799999,
+     "viewCount": 2416,
+     "scrapCount": 55,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Category:626": {
+     "__typename": "Category",
+     "id": "626",
+     "name": "라이프스타일",
+     "parent": null
+    },
+    "Category:627": {
+     "__typename": "Category",
+     "id": "627",
+     "name": "요리/음료",
+     "parent": {
+      "__ref": "Category:626"
+     }
+    },
+    "Category:629": {
+     "__typename": "Category",
+     "id": "629",
+     "name": "운동",
+     "parent": {
+      "__ref": "Category:626"
+     }
+    },
+    "Category:631": {
+     "__typename": "Category",
+     "id": "631",
+     "name": "공예",
+     "parent": {
+      "__ref": "Category:626"
+     }
+    },
+    "Category:634": {
+     "__typename": "Category",
+     "id": "634",
+     "name": "반려동물",
+     "parent": {
+      "__ref": "Category:626"
+     }
+    },
+    "Category:628": {
+     "__typename": "Category",
+     "id": "628",
+     "name": "음악",
+     "parent": {
+      "__ref": "Category:626"
+     }
+    },
+    "Category:632": {
+     "__typename": "Category",
+     "id": "632",
+     "name": "명상/심리",
+     "parent": {
+      "__ref": "Category:626"
+     }
+    },
+    "Category:630": {
+     "__typename": "Category",
+     "id": "630",
+     "name": "뷰티",
+     "parent": {
+      "__ref": "Category:626"
+     }
+    },
+    "Category:635": {
+     "__typename": "Category",
+     "id": "635",
+     "name": "게임",
+     "parent": {
+      "__ref": "Category:626"
+     }
+    },
+    "Activity:354858": {
+     "__typename": "Activity",
+     "organizationName": "윈스펙",
+     "title": "비전공자도 쉽게 배우는 <바이오헬스 입문 : 기초부터 실습까지>",
+     "id": "354858",
+     "categories": [
+      {
+       "__ref": "Category:600"
+      },
+      {
+       "__ref": "Category:602"
+      },
+      {
+       "__ref": "Category:601"
+      },
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:595"
+      },
+      {
+       "__ref": "Category:597"
+      },
+      {
+       "__ref": "Category:599"
+      },
+      {
+       "__ref": "Category:596"
+      },
+      {
+       "__ref": "Category:598"
+      },
+      {
+       "__ref": "Category:580"
+      },
+      {
+       "__ref": "Category:587"
+      },
+      {
+       "__ref": "Category:581"
+      },
+      {
+       "__ref": "Category:625"
+      },
+      {
+       "__ref": "Category:579"
+      },
+      {
+       "__ref": "Category:583"
+      },
+      {
+       "__ref": "Category:585"
+      },
+      {
+       "__ref": "Category:582"
+      },
+      {
+       "__ref": "Category:584"
+      },
+      {
+       "__ref": "Category:586"
+      },
+      {
+       "__ref": "Category:627"
+      },
+      {
+       "__ref": "Category:629"
+      },
+      {
+       "__ref": "Category:631"
+      },
+      {
+       "__ref": "Category:634"
+      },
+      {
+       "__ref": "Category:628"
+      },
+      {
+       "__ref": "Category:632"
+      },
+      {
+       "__ref": "Category:630"
+      },
+      {
+       "__ref": "Category:635"
+      },
+      {
+       "__ref": "Category:566"
+      },
+      {
+       "__ref": "Category:563"
+      },
+      {
+       "__ref": "Category:561"
+      },
+      {
+       "__ref": "Category:564"
+      },
+      {
+       "__ref": "Category:626"
+      }
+     ],
+     "cost": 40000,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:1"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1791903600000,
+     "activityEndAt": 1794581999999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1791903599999,
+     "viewCount": 118,
+     "scrapCount": 1,
+     "isScrapped": false,
+     "activityTypeID": 6
+    },
+    "Activity:354852": {
+     "__typename": "Activity",
+     "organizationName": "윈스펙",
+     "title": "처음부터 제대로 배우는 AI 기초 (feat. 직무별 현업 데이터 분석 실습)",
+     "id": "354852",
+     "categories": [
+      {
+       "__ref": "Category:592"
+      },
+      {
+       "__ref": "Category:594"
+      },
+      {
+       "__ref": "Category:593"
+      },
+      {
+       "__ref": "Category:614"
+      },
+      {
+       "__ref": "Category:569"
+      },
+      {
+       "__ref": "Category:571"
+      },
+      {
+       "__ref": "Category:573"
+      },
+      {
+       "__ref": "Category:575"
+      },
+      {
+       "__ref": "Category:613"
+      },
+      {
+       "__ref": "Category:572"
+      },
+      {
+       "__ref": "Category:570"
+      },
+      {
+       "__ref": "Category:574"
+      },
+      {
+       "__ref": "Category:612"
+      },
+      {
+       "__ref": "Category:600"
+      },
+      {
+       "__ref": "Category:602"
+      },
+      {
+       "__ref": "Category:601"
+      },
+      {
+       "__ref": "Category:603"
+      },
+      {
+       "__ref": "Category:616"
+      },
+      {
+       "__ref": "Category:618"
+      },
+      {
+       "__ref": "Category:617"
+      },
+      {
+       "__ref": "Category:619"
+      },
+      {
+       "__ref": "Category:595"
+      },
+      {
+       "__ref": "Category:597"
+      },
+      {
+       "__ref": "Category:599"
+      },
+      {
+       "__ref": "Category:596"
+      },
+      {
+       "__ref": "Category:598"
+      },
+      {
+       "__ref": "Category:580"
+      },
+      {
+       "__ref": "Category:587"
+      },
+      {
+       "__ref": "Category:581"
+      },
+      {
+       "__ref": "Category:625"
+      },
+      {
+       "__ref": "Category:579"
+      },
+      {
+       "__ref": "Category:583"
+      },
+      {
+       "__ref": "Category:585"
+      },
+      {
+       "__ref": "Category:582"
+      },
+      {
+       "__ref": "Category:584"
+      },
+      {
+       "__ref": "Category:586"
+      },
+      {
+       "__ref": "Category:637"
+      },
+      {
+       "__ref": "Category:562"
+      },
+      {
+       "__ref": "Category:559"
+      },
+      {
+       "__ref": "Category:566"
+      },
+      {
+       "__ref": "Category:615"
+      },
+      {
+       "__ref": "Category:563"
+      },
+      {
+       "__ref": "Category:561"
+      },
+      {
+       "__ref": "Category:564"
+      },
+      {
+       "__ref": "Category:636"
+      }
+     ],
+     "cost": 40000,
+     "isSponsored": true,
+     "onoffline": {
+      "__ref": "Onoffline:1"
+     },
+     "regions": [
+      {
+       "__typename": "Region",
+       "id": "1",
+       "name": "지역 제한없음"
+      }
+     ],
+     "regionDistricts": [],
+     "addresses": [],
+     "activityStartAt": 1791903600000,
+     "activityEndAt": 1794581999999,
+     "recruitType": "NORMAL",
+     "recruitCloseAt": 1791903599999,
+     "viewCount": 206,
+     "scrapCount": 12,
+     "isScrapped": false,
+     "activityTypeID": 6
+    }
+   }
+  }
+ }
+}

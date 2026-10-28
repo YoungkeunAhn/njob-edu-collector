@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N잡러 교육 매칭 플로우</title>
+<style>
+  :root {
+    --bg: #f7f7f5; --card: #ffffff; --text: #1d1d1f; --muted: #6b6b70; --line: #e3e3e0; --accent: #3182f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141416; --card: #1e1e22; --text: #ececf0; --muted: #a0a0a8; --line: #2e2e34; --accent: #5b9dff;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141416; --card: #1e1e22; --text: #ececf0; --muted: #a0a0a8; --line: #2e2e34; --accent: #5b9dff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  nav a { color: var(--accent); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; font-size: 13px; background: var(--card); }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+  h2 { font-size: 18px; margin: 0 0 4px; }
+  section > p { color: var(--muted); margin: 0 0 16px; font-size: 14px; }
+  .diagram { overflow-x: auto; }
+  .diagram svg { max-width: 100%; height: auto; }
+  footer { color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>N잡러 교육 매칭 — 플로우 다이어그램</h1>
+  <p class="sub">기준: spec.md / plan.md (2026-10-11). 앱인토스 WebView → Cloudflare Worker → Supabase(서울)</p>
+  <nav>
+    <a href="#system">1. 시스템 구성</a>
+    <a href="#user">2. 사용자 플로우</a>
+    <a href="#seq">3. 조회 시퀀스</a>
+    <a href="#collect">4. 수집 배치</a>
+    <a href="#erd">5. 데이터 모델</a>
+  </nav>
+
+  <section id="system">
+    <h2>1. 시스템 구성</h2>
+    <p>앱은 DB에 직접 접근하지 않습니다. Worker 하나가 조회 API(fetch)와 수집(scheduled)을 모두 맡습니다.</p>
+    <div class="diagram"><pre class="mermaid">
+flowchart LR
+  subgraph TOSS["토스앱"]
+    APP["미니앱<br/>WebView · Vite + React"]
+    AD["앱인토스 배너 광고"]
+  end
+  subgraph CF["Cloudflare (Workers Paid $5)"]
+    API["Worker fetch<br/>GET /courses · /courses/:id · /meta"]
+    CACHE[("Cache API<br/>1시간")]
+    RL["Rate Limiting<br/>IP당 제한"]
+    CRON["Worker scheduled<br/>Cron 03:00~04:00 KST"]
+    BR["Browser Rendering<br/>헤드리스"]
+  end
+  subgraph SB["Supabase 서울 (Free)"]
+    DB[("Postgres<br/>course · source · collect_run")]
+  end
+  PC["로컬 PC 작업 스케줄러<br/>매일 03:30 (D20)"]
+  subgraph SRC["1차 소스 15개"]
+    S1["공식 API 7"]
+    S2["정적 HTML 8"]
+    S3["AI디지털배움터"]
+    S4["Cloudflare 차단 3<br/>잡아바·주변애·더팀스"]
+  end
+  ORIGIN["원문 사이트"]
+
+  APP -- "배너 로드" --> AD
+  APP -- "HTTPS 조회" --> RL --> API
+  API <--> CACHE
+  API -- "service_role · 읽기" --> DB
+  CRON -- "fetch" --> S1
+  CRON -- "fetch" --> S2
+  CRON --> BR --> S3
+  CRON -- "upsert · 기록" --> DB
+  PC -- "fetch" --> S4
+  PC -- "upsert · 기록" --> DB
+  APP -. "openURL (원문 보기)" .-> ORIGIN
+    </pre></div>
+  </section>
+
+  <section id="user">
+    <h2>2. 사용자 플로우</h2>
+    <p>3번 이내 선택으로 목록 도달(SC-001). 광고는 목록·상세의 배너뿐이라 흐름을 막지 않습니다.</p>
+    <div class="diagram"><pre class="mermaid">
+flowchart TD
+  A(["앱 진입 (광고 없음)"]) --> B["지역 선택<br/>시도 → 시군구"]
+  B --> C["분야 선택<br/>대분류 → 소분류"]
+  C --> D["유형 선택<br/>원데이 클래스 / 교육훈련"]
+  D --> E["[강의 찾기]"]
+  E --> H["목록<br/>지역 강좌 + 온라인(전국)<br/>접수 마감일 순<br/>5번째 카드 뒤 배너 1개 (실패 시 숨김)"]
+  H --> I{"결과 있음?"}
+  I -- "없음" --> J["조건에 맞는 강좌가 없어요<br/>[조건 바꾸기]"] --> B
+  I -- "있음" --> K["강좌 카드<br/>제목 · 기관 · 지역 · 기간 · 가격 · 유형 · 마감일"]
+  K --> L["상세 (앱 안)<br/>접수·교육기간 · 대상 원문 · 장소 · 출처<br/>안내: 신청 조건은 원문에서 확인<br/>본문 아래 배너 1개 (원문 보기 버튼과 떨어뜨림)"]
+  L --> M["보조 버튼 [원문 보기]"]
+  M --> N(["openURL → 원문 사이트<br/>판단 · 신청은 사용자"])
+  L -- "뒤로" --> H
+    </pre></div>
+  </section>
+
+  <section id="seq">
+    <h2>3. 조회 시퀀스</h2>
+    <p>목록 조회와 배너 로드는 따로 진행됩니다. 조회는 캐시를 먼저 보고, 없을 때만 Supabase를 읽습니다.</p>
+    <div class="diagram"><pre class="mermaid">
+sequenceDiagram
+  autonumber
+  actor U as 사용자
+  participant A as 미니앱
+  participant AD as 배너 광고
+  participant W as Worker (fetch)
+  participant C as Cache API
+  participant DB as Supabase
+
+  U->>A: 필터 선택 후 [강의 찾기]
+  A->>W: GET /courses?sido&cat&type
+  W->>W: Rate Limit · 파라미터 검증
+  W->>C: 캐시 조회
+  alt 캐시 적중
+    C-->>W: 응답
+  else 미적중
+    W->>DB: select (마감 전 · 분류됨 · 지역 or 온라인)
+    DB-->>W: 행
+    W->>C: 1시간 저장
+  end
+  W-->>A: 목록 JSON (화면 컬럼만)
+  A-->>U: 목록 표시
+  par 5번째 카드 뒤 1개
+    A->>AD: 배너 로드
+    alt 성공
+      AD-->>A: 배너 표시
+    else 실패
+      AD-->>A: 오류 → 자리 숨김
+    end
+  end
+  U->>A: 강좌 선택 → [원문 보기]
+  A->>U: openURL(원문)
+    </pre></div>
+  </section>
+
+  <section id="collect">
+    <h2>4. 수집 배치</h2>
+    <p>갱신 주기에 맞춰 매일 3그룹 + 주 1회 1그룹으로 나눕니다. 모집 중인 것만 받고, 마감된 강좌는 지웁니다. 소스 하나가 실패해도 다음 소스로 넘어갑니다.</p>
+    <div class="diagram"><pre class="mermaid">
+flowchart TD
+  T1(["매일 03:00 A. 공식 API<br/>고용24 · 서울예약 · 대구 · K-Startup"]) --> L
+  T2(["매일 03:20 B. 정적 HTML<br/>서울평생학습 · SeSAC · 데브이벤트 · 링커리어"]) --> L
+  T3(["매일 03:40 C. 헤드리스<br/>AI디지털배움터"]) --> L
+  T5(["매주 월 04:30 D. 주간<br/>평생학습 표준데이터 · K-MOOC · 온통청년"]) --> L
+  L["그룹 내 소스 순차 실행"] --> F["fetch (모집 중인 것만)<br/>API · HTML · 헤드리스"]
+  F --> OK{"성공?"}
+  OK -- "아니오" --> E["collect_run에 오류 기록"] --> NX
+  OK -- "예" --> N["normalize<br/>공통 스키마 · raw 보관"]
+  N --> TY["course_type 판정<br/>국비훈련=교육훈련 · 시작=종료일이면 원데이<br/>날짜 없으면 제목 키워드"]
+  TY --> RG["지역 매핑<br/>주소 → 법정동 시군구 코드"]
+  RG --> UP["upsert (source, source_id)<br/>이번 수집에 없는 행 삭제<br/>(성공 · 건수 50% 이상일 때만)"]
+  UP --> RUN["collect_run 기록<br/>건수 · 성공"] --> NX{"다음 소스?"}
+  NX -- "있음" --> F
+  NX -- "없음" --> END1(["그룹 종료"])
+
+  T4(["매일 04:00 후처리"]) --> P1["마감 정리<br/>접수 마감일(없으면 교육 시작일) 지난 행 삭제"]
+  P1 --> P2["카테고리 분류<br/>키워드 룰"]
+  P2 --> P3["키워드 미매칭 → 노출 안 함"]
+  P3 --> P4["중복 표시<br/>제목 정규화 + 기관 + 시작일"]
+  P4 --> P5{"실패 또는 전일 대비 50% 이상 감소?"}
+  P5 -- "예" --> AL["텔레그램 알림<br/>Bot API sendMessage"]
+  P5 -- "아니오" --> END2(["완료"])
+  AL --> END2
+    </pre></div>
+  </section>
+
+  <section id="erd">
+    <h2>5. 데이터 모델</h2>
+    <p>테이블 3개. 모든 테이블 RLS 켜고 anon 권한은 회수합니다. Worker만 접근합니다.</p>
+    <div class="diagram"><pre class="mermaid">
+erDiagram
+  SOURCE ||--o{ COURSE : "수집"
+  SOURCE ||--o{ COLLECT_RUN : "실행 기록"
+  SOURCE {
+    text code PK
+    text name
+    text kind "api / html / headless"
+    text license
+    boolean robots_ok
+    text attribution
+    boolean enabled
+  }
+  COURSE {
+    bigint id PK
+    text source FK
+    text source_id "unique(source, source_id)"
+    text title
+    text course_type "oneday / training"
+    text provider_name
+    text category_main
+    text category_sub
+    text mode "online / offline / blended"
+    char sido_code
+    char sigungu_code
+    text cost_type "free / card / partial / paid"
+    int cost_amount
+    date apply_start
+    date apply_end
+    date course_start
+    date course_end
+    text target "원문"
+    text url
+    timestamptz last_seen_at
+    jsonb raw
+  }
+  COLLECT_RUN {
+    bigint id PK
+    text source FK
+    timestamptz started_at
+    timestamptz finished_at
+    boolean ok
+    int fetched
+    int upserted
+    text error
+  }
+    </pre></div>
+  </section>
+
+  <footer>문서: docs/06-스펙/spec.md · plan.md</footer>
+</main>
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs";
+  const dark = document.documentElement.dataset.theme === "dark" ||
+    (document.documentElement.dataset.theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+  mermaid.initialize({ startOnLoad: true, theme: dark ? "dark" : "default", securityLevel: "strict",
+    flowchart: { htmlLabels: true, curve: "basis" } });
+</script>
+</body>
+</html>

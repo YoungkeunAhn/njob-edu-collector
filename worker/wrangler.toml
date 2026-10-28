@@ -1,0 +1,38 @@
+# Cloudflare Worker 1개: fetch = 조회 API, scheduled = 수집 (docs/06-스펙/plan.md D5)
+# 시크릿(SUPABASE_*, TELEGRAM_*, 소스 인증키)은 wrangler secret put 으로 넣는다. 목록은 .dev.vars.example
+name = "njob-edu"
+main = "src/index.ts"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[triggers]
+# plan "Cron 설정" 표와 src/sources/index.ts SCHEDULE 키, collect/run.ts POSTPROCESS_CRON, me/push.ts PUSH_CRON 과 같아야 한다 (test/integration.test.ts)
+crons = ["0 18 * * *", "10 18 * * *", "20 18 * * *", "40 18 * * *", "30 19 * * SUN", "0 19 * * *", "0 1 * * *"]
+
+# 고용24 HTML(6MB × 약 30페이지)·표준데이터 파싱이 기본 CPU 30초를 넘을 수 있다 (Paid 최대 5분)
+[limits]
+cpu_ms = 300000
+
+[vars]
+# 앱인토스 앱 이름이 정해지면 바꾼다 (U5). 쉼표 구분
+ALLOWED_ORIGINS = "https://njob-matching.apps.tossmini.com,https://njob-matching.private-apps.tossmini.com"
+
+# 강좌 이미지 리사이즈 (/img, src/api/image.ts). 고유 변환(원본×너비)당 월 1회 과금
+[images]
+binding = "IMAGES"
+
+# AI디지털배움터 헤드리스 수집 (Workers Paid)
+[browser]
+binding = "BROWSER"
+
+# 조회 API 요청 제한: IP 당 분당 60회 (G0 Q5)
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+simple = { limit = 60, period = 60 }
+
+# 토스 서버 API(로그인·푸시) mTLS 클라이언트 인증서. 콘솔 "mTLS 인증서"에서 발급(njob-edu-worker, 2027-11-07 만료) →
+# `wrangler mtls-certificate upload --cert … --key … --name njob-toss`. 만료 전에 새로 발급해 같은 방식으로 바꾼다
+[[mtls_certificates]]
+binding = "TOSS_MTLS"
+certificate_id = "caa0d1d5-815b-4ae8-a24a-35fd3820de0c"

@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ES2022", "DOM"],
+    "types": ["node", "@cloudflare/workers-types"]
+  },
+  "include": [".", "../src", "../../shared"],
+  // index.ts 는 Workers 전역(caches.default)을 쓰는데 DOM lib 과 충돌한다. 테스트는 index.ts 를 import 하지 않는다
+  "exclude": ["../src/index.ts"]
+}

@@ -1,0 +1,7 @@
+{"_note":"행 내용은 합성, 응답 형식(data[]·matchCount/totalCount)은 2026-10-12 실응답과 맞춤",
+ "currentCount":3,"matchCount":3,"page":1,"perPage":500,"totalCount":30297,
+ "data":[
+  {"pbanc_sn":174001,"biz_pbanc_nm":"2026 생성형 AI 창업 아카데미 교육생 모집","pbanc_ntrp_nm":"창업진흥원","sprv_inst":"공공기관","supt_biz_clsfc":"멘토링·컨설팅·교육","supt_regin":"서울특별시","pbanc_rcpt_bgng_dt":"20261001","pbanc_rcpt_end_dt":"20261031","aply_trgt":"일반인,대학생","rcrt_prgs_yn":"Y","detl_pg_url":"www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&amp;pbancSn=174001"},
+  {"pbanc_sn":174002,"biz_pbanc_nm":"창업보육센터 입주기업 수출상담회","sprv_inst":"공공기관","supt_biz_clsfc":"행사·네트워크","supt_regin":"전국","pbanc_rcpt_bgng_dt":"2026-10-01 00:00:00","pbanc_rcpt_end_dt":"2026-11-15 00:00:00","aply_trgt":"일반기업","rcrt_prgs_yn":"Y","detl_pg_url":"https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=174002"},
+  {"pbanc_sn":173000,"biz_pbanc_nm":"마감된 공고","supt_regin":"부산광역시","pbanc_rcpt_end_dt":"20260901","rcrt_prgs_yn":"N","detl_pg_url":"www.k-startup.go.kr/x"}
+ ]}

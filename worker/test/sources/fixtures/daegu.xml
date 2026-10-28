@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 🟡 합성 — data.go.kr 15061491 Swagger 필드로 작성. 날짜 형식은 미확인이라 YYYY-MM-DD 로 둠. 키 발급 후 실응답으로 교체 -->
+<response><header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header>
+<body><items>
+<item><lec_id>L2026001</lec_id><ord_cd>DG01</ord_cd><lec_title>AI 영상 만들기 원데이 특강</lec_title><ins_name>대구광역시 평생학습진흥원</ins_name><lec_type>오프라인</lec_type><impl_reg_start>2026-10-01</impl_reg_start><impl_reg_finish>2026-10-25</impl_reg_finish><impl_start_dt>2026-11-01</impl_start_dt><impl_finish_dt>2026-11-01</impl_finish_dt><impl_place>3층 강의실</impl_place><lec_cost>0</lec_cost><lec_target_name>성인</lec_target_name><lec_fixedcnt>20</lec_fixedcnt><lec_refer_url>https://dle.study.daegu.kr/lecture/L2026001</lec_refer_url></item>
+<item><lec_id>L2026002</lec_id><ord_cd>DG02</ord_cd><lec_title>수채화 교실</lec_title><ins_name>수성구 평생학습관</ins_name><impl_reg_finish>2026-10-20</impl_reg_finish><impl_start_dt>2026-11-03</impl_start_dt><impl_finish_dt>2026-12-15</impl_finish_dt><lec_cost>30,000원</lec_cost><lec_refer_url></lec_refer_url></item>
+</items><numOfRows>500</numOfRows><pageNo>1</pageNo><totalCount>2</totalCount></body></response>

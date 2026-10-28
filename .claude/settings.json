@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__apps-in-toss-console__bundle_submit_review|mcp__apps-in-toss-console__review_submit",
+        "hooks": [
+          { "type": "command", "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/gate.mjs\"" }
+        ]
+      }
+    ]
+  }
+}

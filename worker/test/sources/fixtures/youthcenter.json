@@ -1,0 +1,7 @@
+{"_note":"🟡 합성 — 온통청년 Open API 명세(getPlcy) 필드로 작성. 래퍼·aplyYmd 형식은 추정. 키 발급 후 실응답으로 교체",
+ "resultCode":200,"resultMessage":"정상적으로 처리되었습니다.",
+ "result":{"pagging":{"totCount":3,"pageNum":1,"pageSize":100},"youthPolicyList":[
+  {"plcyNo":"20261012000001","plcyNm":"청년 AI 디지털 역량 강화 교육","plcyKywdNm":"교육지원","plcyExplnCn":"생성형 AI 활용 교육","sprvsnInstCdNm":"서울특별시","operInstCdNm":"서울청년센터","aplyYmd":"20261001 ~ 20261031","bizPrdBgngYmd":"20261101","bizPrdEndYmd":"20261231","zipCd":"11110","aplyUrlAddr":"https://youth.seoul.go.kr/apply/1","sprtTrgtMinAge":"19","sprtTrgtMaxAge":"39"},
+  {"plcyNo":"20261012000002","plcyNm":"경기 청년 취업 아카데미","sprvsnInstCdNm":"경기도","aplyYmd":"","zipCd":"41110,41130,41150","refUrlAddr1":"https://www.gg.go.kr/youth"},
+  {"plcyNo":"20261012000003","plcyNm":"전국 청년 정책","zipCd":"11110,41110","aplyUrlAddr":"-"}
+ ]}}
