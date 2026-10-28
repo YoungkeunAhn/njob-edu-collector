@@ -47,5 +47,5 @@
 
 ## 참조
 - 스킬 정본: [../../.claude/skills/](../../.claude/skills/) (`flow` · `flow-ticket` · `flow-plan` · `flow-impl` · `flow-ship` · `flow-submit` · `flow-close`)
-- 실행 그래프·진행 기록: [../../backlogs/](../../backlogs/00-START-HERE.md)
+- 실행 그래프·진행 기록: ../../backlogs/
 - 배포 절차·콘솔 ID: [../07-운영/배포-런북.md](../07-운영/배포-런북.md)
