@@ -62,7 +62,8 @@ flowchart LR
 | 페이지 미완결: 총건수 없음·페이지마다 총건수 다름·중간 빈 페이지·반복 페이지·상한 초과 → throw | [`collectPages`](worker/src/sources/util.ts#L44-L74) | `collectPages: 중간의 짧은 페이지는 계속, 총건수 없음·부분 응답·상한 초과는 throw` |
 | 직전 성공 대비 50% 미만 | [`shouldPrune`](worker/src/core/rules.ts#L25) · [`runSource`](worker/src/collect/run.ts#L81-L84) | `T4-3 성공이지만 직전 대비 50% 미만이면 prune 건너뛰고 알림` |
 | 정규화 실패 행 존재 | [`runSource`](worker/src/collect/run.ts#L65-L84) | `T4-4 normalize 예외 행만 버리고 나머지는 저장, 그 실행은 정리하지 않는다` |
-| 수집·저장 실패 | [`runSource`](worker/src/collect/run.ts#L55-L100) · [`supabase-repo.ts`](worker/src/collect/supabase-repo.ts) | `T4-2 실패 소스는 ok=false·error 기록, prune 안 함` |
+| 수집 실패 | [`runSource`](worker/src/collect/run.ts#L55-L100) | `T4-2 실패 소스는 ok=false·error 기록, prune 안 함` |
+| 저장(upsert) 일부 실패 | [`runSource`](worker/src/collect/run.ts#L55-L100) · [`supabase-repo.ts`](worker/src/collect/supabase-repo.ts) — throw → 정리 건너뜀, 실패 기록 | 직접 주입 테스트 없음 ([#5](https://github.com/YoungkeunAhn/njob-edu-collector/issues/5)) |
 | 총건수를 주지 않는 소스 | 소스별 `prune: false` | `총건수를 확인할 수 없는 소스만 prune=false` |
 
 DB 트리거는 `last_seen_at`이 과거로 돌아가지 않게 하고, 사람이 고친 분류를 덮어쓰지 않게 막습니다([`course_triggers.sql`](supabase/migrations/20261011000003_course_triggers.sql)).
@@ -119,6 +120,8 @@ npm run typecheck
 - [#1](https://github.com/YoungkeunAhn/njob-edu-collector/issues/1) 토스 연결 해제 후 재로그인하면 해제 전 세션 토큰이 다시 유효해짐 — 토큰에 연결 버전이 없음
 - [#2](https://github.com/YoungkeunAhn/njob-edu-collector/issues/2) 찜 50개 한도가 동시 요청에서 지켜지지 않음 — 개수 조회와 추가가 분리됨
 - [#3](https://github.com/YoungkeunAhn/njob-edu-collector/issues/3) `/img` 경로가 요청 제한을 거치지 않음
+- [#4](https://github.com/YoungkeunAhn/njob-edu-collector/issues/4) 같은 소스의 실행이 겹치면 늦게 끝난 실행이 최신 결과를 되돌릴 수 있음 — 지금은 Cron 시각이 그룹마다 다르고 그룹 안은 순차라 정상 운영에서는 겹치지 않음
+- [#5](https://github.com/YoungkeunAhn/njob-edu-collector/issues/5) upsert 일부 배치 실패 경로를 직접 검증하는 테스트 없음
 
 ## 저장소 구성
 
